@@ -1,0 +1,47 @@
+image: node:latest
+
+cache:
+  key: "${CI_COMMIT_SHA}"
+  untracked: true
+  paths:
+    - node_modules/
+
+stages:
+  - inception
+  - assess
+  - assemble
+
+create-cache:
+  stage: inception
+  script:
+    - npm install
+  cache:
+    key: "${CI_COMMIT_SHA}"
+    policy: push
+    untracked: true
+    paths:
+      - node_modules/
+
+assess:
+  stage: assess
+  script:
+    - npm run lint
+  cache:
+    key: "${CI_COMMIT_SHA}"
+    policy: pull
+    untracked: true
+    paths:
+      - node_modules/
+
+pack:
+  stage: assemble
+  script:
+    - mkdir -p build
+    - cd build
+    - npm pack ../
+  cache:
+    key: "${CI_COMMIT_SHA}"
+    policy: pull
+    untracked: true
+    paths:
+      - node_modules/

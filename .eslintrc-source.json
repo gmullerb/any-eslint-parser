@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "plugin:base-style-config/js-rules",
+    "plugin:base-style-config/regex[copyright]"
+  ],
+  "env":{
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "base-style-config",
+    "regex"
+  ],
+  "root": true,
+  "rules": {
+    "no-console": "error",
+    "quotes":  [
+      "error",
+      "single", {
+        "avoidEscape": true
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}

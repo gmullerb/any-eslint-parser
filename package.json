@@ -1,0 +1,86 @@
+{
+  "name": "any-eslint-parser",
+  "description": "Check Any file with ESLint",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Gonzalo Müller Bravo",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://any-eslint-parser.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gmullerb/any-eslint-parser"
+  },
+  "bugs": {
+    "url": "https://github.com/gmullerb/any-eslint-parser/issues"
+  },
+  "keywords": [
+    "any-eslint-parser",
+    "eslint-plugin-regex",
+    "eslint",
+    "parser",
+    "style",
+    "regex",
+    "regexp",
+    "lint",
+    "file",
+    "json",
+    "spaces",
+    "tabs",
+    "eol",
+    "lintspaces",
+    "eslint-parser",
+    "linter",
+    "coding",
+    "code",
+    "text",
+    "yml",
+    "yaml",
+    "markdown",
+    "md",
+    "script",
+    "sh",
+    "svg",
+    "cpp",
+    "java",
+    "gradle",
+    "groovy",
+    "rules",
+    "hint",
+    "quality",
+    "guide",
+    "checker",
+    "standard",
+    "syntax",
+    "space",
+    "tab",
+    "git",
+    "gitignore",
+    "npmignore",
+    "eslintparser",
+    "regular-expression",
+    "regular-expression-rule",
+    "eslint-regular-expression",
+    "eslint-regex",
+    "eslint-regular-expression-rule",
+    "eslint-regex-rule"
+  ],
+  "scripts": {
+    "lint": "npm run lint.any && npm run lint.js",
+    "lint.any": "echo ==== Lint Any ====  && eslint --config .eslintrc-any.json  \"**/[\\.a-zA-Z]*.+(js|json|yml|xml|sh|txt|md|svg)\" \"**/.+(|gitignore|npmignore)\" --ignore-pattern \"build\"",
+    "lint.js": "echo ==== Lint JS Code ==== && eslint --config .eslintrc-source.json --color \"**/*.js\"",
+    "prepack": "echo ==== Build Package ====",
+    "check": "npm install && npm run lint && mkdir -p build && cd build && npm pack ../",
+    "prepublishOnly": "npm run check"
+  },
+  "peerDependencies": {
+    "eslint": "*"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-plugin-base-style-config": "^2.8.0",
+    "eslint-plugin-regex": "^1.7.0"
+  }
+}

@@ -1,0 +1,16 @@
+# Folders
+build/
+docs/
+# Files
+.eslintrc.json
+.gitlab-ci.yml
+*.log
+# IDEs
+.vscode
+.vscode/
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.idea/
