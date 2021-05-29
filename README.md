@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://any-eslint-parser.io/"><img src="docs/any-eslint-parser.png" alt=" "/></a>
+  <a href="https://any-eslint-parser.github.io/"><img src="docs/any-eslint-parser.png" alt=" "/></a>
 </p>
 
 <h1 align="center">Check Any file with ESLint</h1>
@@ -23,7 +23,6 @@ __________________
   "devDependencies": {
     "any-eslint-parser": "1.0.0",
     "eslint": "*",
-    ..
 ```
 
 2 . Configure eslint with the required rules, e.g. `eol-last` and `no-tabs`:
@@ -49,8 +48,6 @@ __________________
 ```json
   "scripts": {
     "lint.any": "eslint --config .eslintrc-any.json \"**/*.+(js|jsx|ts|tsx|json|yml|xml|sh|txt|md|svg|properties|gradle|java|cpp|c|html|css|groovy|gitignore|npmignore)\"",
-    ..
-  }
 ```
 
 __________________
@@ -93,13 +90,11 @@ __________________
 
 ```json
   "scripts": {
-    "lint.any": "eslint --config .eslintrc-any.json \"**/[\\.a-zA-Z]*.+(js|jsx|ts|tsx|json|yml|xml|sh|txt|md|svg|properties|gradle|java|cpp|c|html|css|groovy)\" \"**/.+(|gitignore|npmignore)\" --no-eslintrc --ignore-pattern \"build\"",
-    ..
+    "lint.any": "eslint --config .eslintrc-any.json \"**/[\\.a-zA-Z]*.+(js|jsx|ts|tsx|json|yml|xml|sh|txt|md|svg|properties|gradle|java|cpp|c|html|css|groovy)\" \"**/.+(|gitignore|npmignore)\" --no-eslintrc --ignore-pattern \"build\""
   },
   "devDependencies": {
     "any-eslint-parser": "1.0.0",
-    "eslint": "*",
-    ..
+    "eslint": "*"
   }
 ```
 
@@ -113,6 +108,7 @@ Requiring `Copyright` and `License` on every source file of a project.
 
 ```json
   {
+    "plugins": ["regex"],
     "parser": "any-eslint-parser",
     "rules": {
       "regex/required": [
@@ -129,14 +125,12 @@ Requiring `Copyright` and `License` on every source file of a project.
 
 ```json
   "scripts": {
-    "lint.any": "eslint --config .eslintrc-any.json \"**/*.+(js|jsx|ts|tsx|gradle|java|cpp|c|groovy|yml|sh)\"",
-    ..
+    "lint.any": "eslint --config .eslintrc-any.json \"**/*.+(js|jsx|ts|tsx|gradle|java|cpp|c|groovy|yml|sh)\""
   },
   "devDependencies": {
     "any-eslint-parser": "1.0.0",
     "eslint": "*",
-    "eslint-plugin-regex": "*",
-    ..
+    "eslint-plugin-regex": "*"
   }
 ```
 
@@ -154,9 +148,9 @@ __________________
 
 * **Use it**.
 * **Share it**.
-* [Give it a Star](https://github.com/gmullerb/eslint-plugin-regex).
-* [Propose changes or improvements](https://github.com/gmullerb/eslint-plugin-regex/issues).
-* [Report bugs](https://github.com/gmullerb/eslint-plugin-regex/issues).
+* [Give it a Star](https://github.com/gmullerb/any-eslint-parser).
+* [Propose changes or improvements](https://github.com/gmullerb/any-eslint-parser/issues).
+* [Report bugs](https://github.com/gmullerb/any-eslint-parser/issues).
 
 ## License
 
